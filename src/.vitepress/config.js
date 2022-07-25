@@ -17,19 +17,19 @@ const nav = [
       { text: 'Work Notes', link: '/work-notes/' },
     ]
   },
-  {
-    text: 'Vue',
-    items: [
-      { text: 'Playground', link: 'https://sfc.vuejs.org'},
-      { text: 'API', link: 'https://vuejs.org/api/'},
-      { text: 'introduction', link: 'https://vuejs.org/guide/introduction' },
-      { text: 'tutorial', link: 'https://vuejs.org/tutorial/' },
-      { text: 'examples', link: 'https://vuejs.org/examples/' },
-      { text: 'Quick Start', link: 'https://vuejs.org/guide/quick-start' },
-      { text: 'Style Guide', link: 'https://vuejs.org/style-guide/' },
-      // {text: 'Migration from Vue 2', link: 'https://v3-migration.vuejs.org/'}
-    ]
-  }
+  // {
+  //   text: 'Vue',
+  //   items: [
+  //     { text: 'Playground', link: 'https://sfc.vuejs.org'},
+  //     { text: 'API', link: 'https://vuejs.org/api/'},
+  //     { text: 'introduction', link: 'https://vuejs.org/guide/introduction' },
+  //     { text: 'tutorial', link: 'https://vuejs.org/tutorial/' },
+  //     { text: 'examples', link: 'https://vuejs.org/examples/' },
+  //     { text: 'Quick Start', link: 'https://vuejs.org/guide/quick-start' },
+  //     { text: 'Style Guide', link: 'https://vuejs.org/style-guide/' },
+  //     // {text: 'Migration from Vue 2', link: 'https://v3-migration.vuejs.org/'}
+  //   ]
+  // }
 ]
 
 // TODO 抽取左侧菜单
@@ -135,8 +135,8 @@ module.exports = (async () => {
     },
 
     lang: 'en-US',
-    title: 'ShineRay',
-    description: 'ShineRay',
+    title: 'ToBetter',
+    description: 'ToBetter',
     scrollOffset: 'header',
     head: [
       [
@@ -212,11 +212,10 @@ module.exports = (async () => {
       //   )
       // ],
     ],
-
     themeConfig: {
       logo: '/img/logo-share-dark.svg',
       logoDark: '/img/logo-share.svg',
-      logoText: 'ShineRay',
+      logoText: 'KnowledgeLib',
       // algolia: {
       //   indexName: 'pro_github',
       //   appId: 'TH7FJEUQK2',
@@ -228,16 +227,16 @@ module.exports = (async () => {
       //   placement: 'vuejsorg'
       // },
 
-      socialLinks: [
-        { icon: 'github', link: 'https://github.com/mshineray/' },
-      ],
+      // socialLinks: [
+      //   { icon: 'github', link: 'https://github.com/mshineray/' },
+      // ],
 
       nav,
-      sidebar,
-      editLink: { // TODO repo不支持替换，解决方式：基于@vue/theme 新搭建主题
-        repo: 'MShineRay/MShineRay.github.io',
-        text: 'Edit this page on GitHub'
-      },
+      // sidebar,
+      // editLink: { // TODO repo不支持替换，解决方式：基于@vue/theme 新搭建主题
+      //   repo: 'MShineRay/MShineRay.github.io',
+      //   text: 'Edit this page on GitHub'
+      // },
 
       footer: {
         license: {
@@ -245,7 +244,11 @@ module.exports = (async () => {
           link: 'https://opensource.org/licenses/MIT'
         },
         copyright: `Copyright © 2022-now MShineRay`
-      }
+      },
+      appearance: false // 屏蔽黑白主题切换
+    },
+    frontmatter: {
+      aside: false
     }
   }
 })()

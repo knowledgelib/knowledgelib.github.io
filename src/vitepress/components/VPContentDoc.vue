@@ -8,7 +8,10 @@ import type { Config } from '../config'
 import { VTLink, VTIconEdit } from '../../core'
 
 const { page, frontmatter, theme } = useData<Config>()
-
+console.log('frontmatter.aside')
+console.error(frontmatter)
+console.error(frontmatter.aside)
+console.error(useData())
 const hashMatch = /#(\w+)$/
 
 const repoUrl = computed(() => {
@@ -26,10 +29,11 @@ const pageClass = computed(() => {
 <template>
   <div
     class="VPContentDoc"
-    :class="{ 'has-aside': frontmatter.aside !== false }"
   >
+<!--    :class="{ 'has-aside': frontmatter.aside !== false }"-->
     <div class="container">
-      <div class="aside" v-if="frontmatter.aside !== false">
+      <div class="aside" v-if="frontmatter.aside">
+<!--        v-if="frontmatter.aside !== false"-->
         <div class="aside-container">
           <slot name="aside-top" />
           <VPContentDocOutline

@@ -3,6 +3,9 @@ import { VTSwitchAppearance } from '../../core'
 import { useConfig } from '../composables/config'
 
 const { config } = useConfig()
+console.log('config')
+console.log(config)
+console.log(useConfig())
 </script>
 
 <template>
